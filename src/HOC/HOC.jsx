@@ -8,11 +8,7 @@ const HOC = (WrappedComponents, number) => {
       setCount(count + number);
     };
 
-    return (
-      <div>
-        <WrappedComponents count={count} increment={increment} {...props} />
-      </div>
-    );
+    return <WrappedComponents count={count} increment={increment} {...props} />;
   };
 };
 

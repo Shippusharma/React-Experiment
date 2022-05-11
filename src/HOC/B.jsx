@@ -3,9 +3,12 @@ import HOC from './HOC';
 
 const B = ({ count, increment, name }) => {
   return (
-    <button type='button' onMouseOver={increment}>
-      {name} MouseOver {count}
-    </button>
+    <div>
+      <hr />
+      <button type='button' onMouseOver={increment}>
+        {name} MouseOver {count}
+      </button>{' '}
+    </div>
   );
 };
 

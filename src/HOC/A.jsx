@@ -3,9 +3,12 @@ import HOC from './HOC';
 
 const A = ({ count, increment, name }) => {
   return (
-    <button type='button' onClick={increment}>
-      {name} Click {count}
-    </button>
+    <div>
+      <button type='button' onClick={increment}>
+        {name} Click {count}
+      </button>{' '}
+      <br />
+    </div>
   );
 };
 
