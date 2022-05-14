@@ -1,19 +1,25 @@
-import { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Country from './country_state_city/Country';
 import A from './HOC/A';
 import B from './HOC/B';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className='App'>
-      {/* /////////////////////////////// HOC ////////////////////////// */}
-      <A name='A' />
-      <B name='B' />
-      {/* /////////////////////////////// PureComponents ////////////////////////// */}
-    </div>
+    <>
+      <div
+        className='Fetching Country_State_City'
+        style={{ backgroundColor: 'lightgreen', textAlign: 'center', padding: '20px', border: '1px solid black' }}
+      >
+        <Country />
+      </div>
+      <div
+        className='Higher_Order_Components'
+        style={{ backgroundColor: 'lightblue', textAlign: 'center', padding: '20px', border: '1px solid black' }}
+      >
+        <A name='A' />
+        <B name='B' />
+      </div>
+    </>
   );
 }
 

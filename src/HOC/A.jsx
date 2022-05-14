@@ -7,7 +7,6 @@ const A = ({ count, increment, name }) => {
       <button type='button' onClick={increment}>
         {name} Click {count}
       </button>{' '}
-      <br />
     </div>
   );
 };
