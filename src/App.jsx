@@ -1,5 +1,6 @@
 import './App.css';
 // import Country from './country_state_city/Country';
+import UsingWeb3 from './web3';
 import A from './HOC/A';
 import B from './HOC/B';
 import Memo from './memo';
@@ -7,15 +8,14 @@ import RefTest from './useRef/RefTest';
 import Layout from './useLayoutEffect/Layout';
 import FormFill from './react-hook-form/FormFill';
 import ReactSkeleton from './react-loading-skeleton';
-// import Web3 from './web3';
 
 function App() {
   return (
     <>
       {/* ///////////////////// web3.js///////////////// */}
-      {/* <div className='web3' style={{ textAlign: 'center', padding: '20px', border: '1px solid black' }}>
-        <Web3 />
-      </div> */}
+      <div className='web3'>
+        <UsingWeb3 />
+      </div>
       {/* ///////////////////// HOC ///////////////// */}
       <div
         className='Higher_Order_Components'
