@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 // import Country from './country_state_city/Country';
 import A from './HOC/A';
@@ -7,6 +8,8 @@ import RefTest from './useRef/RefTest';
 import Layout from './useLayoutEffect/Layout';
 import FormFill from './react-hook-form/FormFill';
 import ReactSkeleton from './react-loading-skeleton';
+import UseMemo from './useMemo';
+import UseCallback from './useCallback';
 
 function App() {
   return (
@@ -22,35 +25,48 @@ function App() {
       </div>
       {/* ///////////////////// memo ///////////////// */}
       <div
-        className='Higher_Order_Components'
+        className='memo'
         style={{ backgroundColor: 'lightblue', textAlign: 'center', padding: '20px', border: '1px solid black' }}
       >
         <Memo />
       </div>
-      {/* ///////////////////// React-loading Skeleton ///////////////// */}
+
+      {/* ///////////////////// useCallback ///////////////// */}
       <div
-        className='Higher_Order_Components'
-        style={{ textAlign: 'center', padding: '20px', border: '1px solid black' }}
+        className='memo'
+        style={{ backgroundColor: 'lightblue', textAlign: 'center', padding: '20px', border: '1px solid black' }}
       >
+        <UseCallback />
+      </div>
+
+      {/* ///////////////////// useMemo ///////////////// */}
+      <div
+        className='memo'
+        style={{ backgroundColor: 'lightblue', textAlign: 'center', padding: '20px', border: '1px solid black' }}
+      >
+        <UseMemo />
+      </div>
+      {/* ///////////////////// React-loading Skeleton ///////////////// */}
+      <div className='react-skeleton' style={{ textAlign: 'center', padding: '20px', border: '1px solid black' }}>
         <ReactSkeleton />
       </div>
       {/* ///////////////////// React-Hook-Form ///////////////// */}
       <div
-        className='Higher_Order_Components'
+        className='react-hook-form'
         style={{ backgroundColor: 'lightblue', textAlign: 'center', padding: '20px', border: '1px solid black' }}
       >
         <FormFill />
       </div>
       {/* ///////////////////// useRef ///////////////// */}
       <div
-        className='Higher_Order_Components'
+        className='ref'
         style={{ backgroundColor: 'lightblue', textAlign: 'center', padding: '20px', border: '1px solid black' }}
       >
         <RefTest />
       </div>
       {/* ///////////////////// useLayoutEffect ///////////////// */}
       <div
-        className='Higher_Order_Components'
+        className='layout-effect'
         style={{ backgroundColor: 'lightblue', textAlign: 'center', padding: '20px', border: '1px solid black' }}
       >
         <h6>useLayoutEffect</h6>
