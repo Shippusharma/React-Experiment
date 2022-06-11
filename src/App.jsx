@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 // import Country from './country_state_city/Country';
+import UsingWeb3 from './web3';
 import A from './HOC/A';
 import B from './HOC/B';
 import Memo from './memo';
@@ -14,6 +15,10 @@ import UseCallback from './useCallback';
 function App() {
   return (
     <>
+      {/* ///////////////////// web3.js///////////////// */}
+      <div className='web3'>
+        <UsingWeb3 />
+      </div>
       {/* ///////////////////// HOC ///////////////// */}
       <div
         className='Higher_Order_Components'
