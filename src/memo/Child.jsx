@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
 
-const AB = () => {
+const Child = () => {
   console.log('react-memo');
   return <div></div>;
 };
 
-export default memo(AB);
+export default memo(Child);

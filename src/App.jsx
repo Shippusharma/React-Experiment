@@ -1,33 +1,33 @@
 import React from 'react';
 import './App.css';
 // import Country from './country_state_city/Country';
-import UsingWeb3 from './web3';
+import EthersWeb3 from './ethers_web3';
 import A from './HOC/A';
 import B from './HOC/B';
 import Memo from './memo';
-import RefTest from './useRef/RefTest';
+import RefTest from './useRef';
 import Layout from './useLayoutEffect/Layout';
 import FormFill from './react-hook-form/FormFill';
 import ReactSkeleton from './react-loading-skeleton';
 import UseMemo from './useMemo';
 import UseCallback from './useCallback';
+import PureFunction from './pure-function';
+import LazyLoading from './code_splitting/LazyLoading';
+import CustomHook from './custom_hook';
 
 function App() {
   return (
     <>
-      {/* ///////////////////// web3.js///////////////// */}
-      <div className='web3'>
-        <UsingWeb3 />
-      </div>
       {/* ///////////////////// HOC ///////////////// */}
       <div
         className='Higher_Order_Components'
         style={{ backgroundColor: 'lightblue', textAlign: 'center', padding: '20px', border: '1px solid black' }}
       >
-        <h6>Higher Order Component</h6>
+        <h6>Higher Order Component | Pure Component</h6>
         <A name='A' />
         <B name='B' />
       </div>
+
       {/* ///////////////////// memo ///////////////// */}
       <div
         className='memo'
@@ -36,11 +36,20 @@ function App() {
         <Memo />
       </div>
 
+      {/* ///////////////////// Pure Function ///////////////// */}
+      <div
+        className='memo'
+        style={{ backgroundColor: 'lightblue', textAlign: 'center', padding: '20px', border: '1px solid black' }}
+      >
+        <PureFunction />
+      </div>
+
       {/* ///////////////////// useCallback ///////////////// */}
       <div
         className='memo'
         style={{ backgroundColor: 'lightblue', textAlign: 'center', padding: '20px', border: '1px solid black' }}
       >
+        <p>useCallback</p>
         <UseCallback />
       </div>
 
@@ -51,17 +60,16 @@ function App() {
       >
         <UseMemo />
       </div>
-      {/* ///////////////////// React-loading Skeleton ///////////////// */}
-      <div className='react-skeleton' style={{ textAlign: 'center', padding: '20px', border: '1px solid black' }}>
-        <ReactSkeleton />
-      </div>
-      {/* ///////////////////// React-Hook-Form ///////////////// */}
+
+      {/* ///////////////////// Custom Hook ///////////////// */}
       <div
-        className='react-hook-form'
+        className='memo'
         style={{ backgroundColor: 'lightblue', textAlign: 'center', padding: '20px', border: '1px solid black' }}
       >
-        <FormFill />
+        <p>Custom Hook</p>
+        <CustomHook />
       </div>
+
       {/* ///////////////////// useRef ///////////////// */}
       <div
         className='ref'
@@ -69,6 +77,7 @@ function App() {
       >
         <RefTest />
       </div>
+
       {/* ///////////////////// useLayoutEffect ///////////////// */}
       <div
         className='layout-effect'
@@ -77,6 +86,34 @@ function App() {
         <h6>useLayoutEffect</h6>
         <Layout />
       </div>
+
+      {/* ///////////////////// React-loading Skeleton ///////////////// */}
+      <div className='react-skeleton' style={{ textAlign: 'center', padding: '20px', border: '1px solid black' }}>
+        <ReactSkeleton />
+      </div>
+
+      {/* ///////////////////// web3.js///////////////// */}
+      <div className='web3'>
+        <EthersWeb3 />
+      </div>
+
+      {/* ///////////////////// React-Hook-Form ///////////////// */}
+      <div
+        className='react-hook-form'
+        style={{ backgroundColor: 'lightblue', textAlign: 'center', padding: '20px', border: '1px solid black' }}
+      >
+        <FormFill />
+      </div>
+
+      {/* ///////////////////// code_splitting ///////////////// */}
+      <div
+        className='react-hook-form'
+        style={{ backgroundColor: 'lightblue', textAlign: 'center', padding: '20px', border: '1px solid black' }}
+      >
+        <p>Code Splitting | Lazy loading | Error Boundaries | Routes-based code Splitting</p>
+        <LazyLoading />
+      </div>
+
       {/* ///////////////////// display counter ///////////////// */}
       {/* <div
         className='Fetching Country_State_City'

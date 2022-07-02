@@ -16,7 +16,7 @@ const ReactSkeleton = () => {
   const arr = [1, 2, 3, 4, 5];
   return (
     <>
-      <h1>ReactSkeleton</h1>
+      <h4>ReactSkeleton</h4>
       <div
         style={{
           display: 'flex',

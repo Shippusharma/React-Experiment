@@ -9,15 +9,11 @@ const abi = contract.abi;
 
 function UsingWeb3() {
   const [currentAccount, setCurrentAccount] = useState(null);
+  const { ethereum } = window;
 
   const checkWalletIsConnected = async () => {
-    const { ethereum } = window;
-
-    if (!ethereum) {
-      return console.log('Make sure you have Metamask installed!');
-    } else {
-      console.log("Wallet exists! We're ready to go!");
-    }
+    if (!ethereum) return console.log('Make sure you have Metamask installed!');
+    console.log("Wallet exists! We're ready to go!");
 
     const accounts = await ethereum.request({ method: 'eth_accounts' });
 
@@ -31,11 +27,7 @@ function UsingWeb3() {
   };
 
   const connectWalletHandler = async () => {
-    const { ethereum } = window;
-
-    if (!ethereum) {
-      alert('Please install Metamask!');
-    }
+    if (!ethereum) alert('Please install Metamask!');
 
     try {
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
@@ -48,8 +40,6 @@ function UsingWeb3() {
 
   const mintNftHandler = async () => {
     try {
-      const { ethereum } = window;
-
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
@@ -92,7 +82,7 @@ function UsingWeb3() {
 
   return (
     <div className='main-app'>
-      <h1>Learning Web3</h1>
+      <h3>Learning Web3 | npm ethers </h3>
       <div>{currentAccount ? mintNftButton() : connectWalletButton()}</div>
     </div>
   );

@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useLayoutEffect, useEffect, useRef } from 'react';
 
 const Layout = () => {
-  return <div>Layout</div>;
+  const ref = useRef('red');
+
+  useEffect(() => {
+    ref.current = 'yellow';
+    console.log(ref, 'useEffect');
+  });
+
+  useLayoutEffect(() => {
+    console.log(ref, 'useLayoutEffect');
+  });
+
+  return <div></div>;
 };
 
 export default Layout;
