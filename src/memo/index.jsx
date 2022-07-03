@@ -5,7 +5,7 @@ const MemoUse = () => {
   const [count, setCount] = useState(100);
   return (
     <div>
-      <p> Memo | Pure Component</p>
+      <p> Memo</p>
       <Child />
       <button type='button' onClick={() => setCount(count + 1)}>
         {count}

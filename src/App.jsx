@@ -66,7 +66,7 @@ function App() {
         className='memo'
         style={{ backgroundColor: 'lightblue', textAlign: 'center', padding: '20px', border: '1px solid black' }}
       >
-        <p>Custom Hook</p>
+        <p>Custom Hook | Pure Component</p>
         <CustomHook />
       </div>
 
