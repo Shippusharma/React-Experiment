@@ -14,37 +14,8 @@ import UseCallback from './useCallback';
 import PureFunction from './pure-function';
 import LazyLoading from './code_splitting/LazyLoading';
 import CustomHook from './custom_hook';
-
-import { useSelector, useDispatch } from 'react-redux';
-import { decrement, increment, reset, incrementByAmount, decrementByAmount } from './app/features/counter/counterSlice';
-const Counter = () => {
-  const count = useSelector((state) => state.counter.value);
-  const dispatch = useDispatch();
-
-  return (
-    <div>
-      <p>Redux-Toolkit</p>
-      <span>{count}</span>
-      <div>
-        <button aria-label='Increment value' onClick={() => dispatch(increment())}>
-          Increment
-        </button>
-        <button aria-label='Decrement value' onClick={() => dispatch(decrement())}>
-          Decrement
-        </button>
-        <button aria-label='Reset value' onClick={() => dispatch(reset())}>
-          Reset
-        </button>
-        <button aria-label='incrementByAmount value' onClick={() => dispatch(incrementByAmount(1000))}>
-          incrementByAmount
-        </button>
-        <button aria-label='decrementByAmount value' onClick={() => dispatch(decrementByAmount(500))}>
-          decrementByAmount
-        </button>
-      </div>
-    </div>
-  );
-};
+import Counter from './app/components/Counter';
+import Users from './app/components/Users';
 
 function App() {
   return (
@@ -55,6 +26,7 @@ function App() {
         style={{ backgroundColor: 'lightblue', textAlign: 'center', padding: '20px', border: '1px solid black' }}
       >
         <Counter />
+        <Users />
       </div>
 
       {/* ///////////////////// HOC ///////////////// */}
